@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:rights_project/screens/registration/firstscreen.dart';
 
 import 'package:rights_project/style.dart';
-
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -12,13 +12,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-
   @override
   void initState() {
     Timer(const Duration(seconds: 10), () {
-      // login(context);
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) =>  const Firstscreen()));
     });
+
 
     super.initState();
   }
@@ -34,14 +34,14 @@ class _SplashScreenState extends State<SplashScreen> {
               color: Colors.black,
               shape: BoxShape.circle,
               border: Border.all(color: Colors.black, width: 1.5),
-              boxShadow: const  [BoxShadow(color: Colors.black, blurRadius: 3)]),
-          child:  const CircleAvatar(
+              boxShadow: const [BoxShadow(color: Colors.black, blurRadius: 3)]),
+          child: const CircleAvatar(
               backgroundColor: Colors.white,
               radius: 45,
-              child:  Image(
-                  image:  AssetImage(
-                    'assets/logo3.png',
-                  ))),
+              child: Image(
+                  image: AssetImage(
+                'images/logo.png',
+              ))),
         ),
       ),
     );
