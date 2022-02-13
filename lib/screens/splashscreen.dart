@@ -1,8 +1,11 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:rights_project/screens/registration/firstscreen.dart';
+import 'package:rights_project/admin_sceen/map.dart';
 
 import 'package:rights_project/style.dart';
+
+import '../admin_sceen/awareness_information.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -16,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Timer(const Duration(seconds: 10), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) =>  const Firstscreen()));
+          MaterialPageRoute(builder: (context) =>  const AwarenessInfoScreen()));
     });
 
 
