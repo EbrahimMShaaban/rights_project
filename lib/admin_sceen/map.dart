@@ -26,7 +26,9 @@ class _MapScreenState extends State<MapScreen> {
               fillColor: Colors.white,
               border:  OutlineInputBorder(
                 borderRadius:  BorderRadius.circular(25.0),
-                borderSide: const BorderSide(),
+                borderSide: const BorderSide(
+                  color:  Color(0xffd1aa5f)
+                ),
               ),
               //fillColor: Colors.green
             ),

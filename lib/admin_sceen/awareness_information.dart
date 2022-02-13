@@ -9,52 +9,58 @@ class AwarenessInfoScreen extends StatefulWidget {
 
 class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
   var formKey = GlobalKey<FormState>();
-  final TextEditingController infoEditControl = TextEditingController();
+  final TextEditingController infoEditControl  = TextEditingController();
+
+  String? infoText = '' ;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: buildFloatingActionButton(context),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 23,
-          ),
-          Row(
-            children: [
-              const Image(
-                image: AssetImage('images/curve.png'),
-                height: 180,
-              ),
-              Column(
-                children: const [
-                  Text(
-                    'معلومات التوعية',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Divider(
-                    height: 20,
-                    thickness: 1,
-                    endIndent: 2,
-                    color: Colors.deepOrange,
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Text(
-              'بصفتك محاميًا ، يمكن أن توفر لك واجباتك اليومية الكثير من التحفيز والتحديات العقلية ، على سبيل المثال ، قد تتضمن بعض مسؤولياتك فهم النظريات القانونية المعقدة وتحديد النتائج المحتملة لعملائك عندما يتعلق الأمر بالقضية ، للقيام بذلك ، تحتاج إلى حل المشكلات ، وتشكيل فرضية وإنشاء استراتيجية قانونية لإفادة عميلك في قاعة المحكمة.',
-              textAlign: TextAlign.end,
+      body: Form(
+        key: formKey,
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 23,
             ),
-          ),
-        ],
+            Row(
+              children: [
+                const Image(
+                  image: AssetImage('images/curve.png'),
+                  height: 180,
+                ),
+                Column(
+                  children: const [
+                    Text(
+                      'معلومات التوعية',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Divider(
+                      height: 20,
+                      thickness: 1,
+                      endIndent: 2,
+                      color: Colors.deepOrange,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+             Padding(
+              padding:const EdgeInsets.all(10.0),
+              child: Text(
+                '$infoText',
+                textAlign: TextAlign.end,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -77,6 +83,12 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
                     ),),
                    const SizedBox(height: 5,),
                     TextFormField(
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return 'Enter Some Text';
+                        }
+                        return null;
+                      },
                       controller:infoEditControl ,
                       maxLines: 14,
                       decoration:const  InputDecoration(
@@ -88,7 +100,14 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
                       width: 70,
                       height: 50.0,
                       child: MaterialButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          if(formKey.currentState!.validate()){
+                            setState(() {
+                              infoText = infoEditControl.text;
+                            });
+                          }
+
+                        },
                         child:const Text(
                           'Save',
                           style: TextStyle(
