@@ -12,7 +12,7 @@ class Firstscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("images/background.png"),
             fit: BoxFit.cover,
@@ -35,7 +35,7 @@ class Firstscreen extends StatelessWidget {
                 Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => const Login()));
               },
-              txt: 'Login',color: Color(0xffd1aa5f),
+              txt: 'Login',color: const Color(0xffd1aa5f),
             ),
             SizedBox(height: sizeFromHeight(context, 10)),
             Loginbuton(
@@ -43,7 +43,7 @@ class Firstscreen extends StatelessWidget {
                 Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => const Firstscreen()));
               },
-              txt: 'Sign Up',color: Color(0xffd1aa5f)
+              txt: 'Sign Up',color: const Color(0xffd1aa5f)
             ),
           ],
         ),

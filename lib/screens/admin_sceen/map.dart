@@ -14,35 +14,37 @@ class _MapScreenState extends State<MapScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Color(0xffd1aa5f)),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
+      appBar: AppBar(backgroundColor: const Color(0xffd1aa5f)),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
 
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextFormField(
-              controller: searchControl,
-              decoration: InputDecoration(
-                labelText: "Search",
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25.0),
-                  borderSide: const BorderSide(color: Color(0xffd1aa5f)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                controller: searchControl,
+                decoration: InputDecoration(
+                  labelText: "Search",
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25.0),
+                    borderSide: const BorderSide(color: Color(0xffd1aa5f)),
+                  ),
+                  //fillColor: Colors.green
                 ),
-                //fillColor: Colors.green
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: const Image(
-              image: AssetImage('images/so.jpg'),
-              fit: BoxFit.cover,
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Image(
+                image: AssetImage('images/so.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

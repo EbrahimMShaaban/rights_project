@@ -10,7 +10,7 @@ final String itemname;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff3f3b43),
+        backgroundColor: const Color(0xff3f3b43),
         centerTitle: true,
         title: Text(itemname),
       ),
@@ -20,7 +20,7 @@ final String itemname;
             return Useritem(
               ontab: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => Userdetails()));
+                    MaterialPageRoute(builder: (context) => const Userdetails()));
               },
               bookName: 'محامي',
             );

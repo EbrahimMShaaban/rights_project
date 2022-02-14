@@ -18,7 +18,7 @@ class _LoginState extends State<Login> {
   String email = '';
   String password = '';
   LinearGradient blurGradient =
-      LinearGradient(begin: Alignment.topRight, end: Alignment.topLeft,
+      const LinearGradient(begin: Alignment.topRight, end: Alignment.topLeft,
           //stops: [.100, .9],
           colors: [Color(0xff818279), Color(0xffb2b2ad)]);
 
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
       child: ListView(
         children: [
           Container(
-            child: Image(
+            child: const Image(
               image: AssetImage('images/logo.png'),
               width: 200,
               height: 200,

@@ -16,7 +16,7 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Color(0xff3f3b43),elevation: 0),
+      appBar: AppBar(backgroundColor: const Color(0xff3f3b43),elevation: 0),
       floatingActionButton: buildFloatingActionButton(context),
       body: Form(
         key: formKey,
@@ -67,7 +67,7 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
           context: context,
           builder: (BuildContext context) {
             return Container(
-              height: 400,
+              height:  400,
               child: Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

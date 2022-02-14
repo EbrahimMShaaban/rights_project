@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 import 'package:rights_project/style.dart';
@@ -28,16 +27,16 @@ class _UseritemState extends State<Useritem> {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           decoration: BoxDecoration(
-            color: Color(0xffe0e1df),
+            color: const Color(0xffe0e1df),
             // boxShadow: const [BoxShadow(color: white, blurRadius: 6)],
-            border: Border.all(color: Color(0xff3f3b43), width: 1.5),
+            border: Border.all(color: const Color(0xff3f3b43), width: 1.5),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
             children: [
               Expanded(
                 child: Text(
-                  "${widget.bookName}",
+                  widget.bookName,
                   maxLines: 2,
 
                 ),

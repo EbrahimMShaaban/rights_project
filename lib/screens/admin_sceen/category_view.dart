@@ -18,7 +18,7 @@ class _CategoryState extends State<CategoryView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("images/background.png"),
             fit: BoxFit.cover,
@@ -34,28 +34,28 @@ class _CategoryState extends State<CategoryView> {
                   ));
                 },
                 txt: 'إدارة المحامين',
-                color: Color(0xffd1aa5f)),
+                color: const Color(0xffd1aa5f)),
             Loginbuton(
                 ontab: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const Userview(itemname: 'إدارة المستخدمين',)));
                 },
                 txt: 'إدارة المستخدمين',
-                color: Color(0xffd1aa5f)),
+                color: const Color(0xffd1aa5f)),
             Loginbuton(
                 ontab: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const MapScreen()));
                 },
                 txt: 'إدارة الأماكن',
-                color: Color(0xffd1aa5f)),
+                color: const Color(0xffd1aa5f)),
             Loginbuton(
                 ontab: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const AwarenessInfoScreen()));
                 },
                 txt: 'إدارة معلومات التوعية',
-                color: Color(0xffd1aa5f)),
+                color: const Color(0xffd1aa5f)),
           ],
         ),
       ),
