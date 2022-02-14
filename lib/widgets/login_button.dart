@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:rights_project/style.dart';
 
 class Loginbuton extends StatelessWidget {
-  Loginbuton({Key? key, required this.txt,
+  Loginbuton({Key? key, required this.txt,required this.color,
     required this.ontab
   })
       : super(key: key);
-
+Color color;
   String txt;
   Function ontab;
 
@@ -26,7 +26,7 @@ class Loginbuton extends StatelessWidget {
           child: Center(
               child: Text(
             txt,
-            style: TextStyle(color: Color(0xffd1aa5f), fontSize: 20),
+            style: TextStyle(color: color, fontSize: 20),
           )),
         ),
       ),

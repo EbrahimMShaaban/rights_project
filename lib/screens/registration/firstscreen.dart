@@ -35,7 +35,7 @@ class Firstscreen extends StatelessWidget {
                 Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => const Login()));
               },
-              txt: 'Login',
+              txt: 'Login',color: Color(0xffd1aa5f),
             ),
             SizedBox(height: sizeFromHeight(context, 10)),
             Loginbuton(
@@ -43,7 +43,7 @@ class Firstscreen extends StatelessWidget {
                 Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => const Firstscreen()));
               },
-              txt: 'Sign Up',
+              txt: 'Sign Up',color: Color(0xffd1aa5f)
             ),
           ],
         ),

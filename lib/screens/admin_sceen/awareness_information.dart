@@ -16,19 +16,18 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor: Color(0xff3f3b43),elevation: 0),
       floatingActionButton: buildFloatingActionButton(context),
       body: Form(
         key: formKey,
         child: Column(
           children: [
-            const SizedBox(
-              height: 23,
-            ),
+
             Row(
               children: [
                 const Image(
                   image: AssetImage('images/curve.png'),
-                  height: 180,
+                  height: 140,
                 ),
                 Column(
                   children: const [

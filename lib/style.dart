@@ -5,6 +5,7 @@ Color brown =const Color(0xff3f3b43);
 Color gold =const Color(0xffd1aa5f);
 Color darkzet =const Color(0xff818279);
 Color lightzet =const Color(0xffb2b2ad);
+Color lighttext =const Color(0xffe0e1df);
 
 
 //sizes

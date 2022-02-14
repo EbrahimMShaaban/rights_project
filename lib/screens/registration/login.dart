@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rights_project/screens/admin_sceen/category_view.dart';
 import 'package:rights_project/style.dart';
-import 'package:rights_project/widgets/fieldlogin.dart';
 
 import '../../widgets/login_button.dart';
 
@@ -17,18 +17,32 @@ class _LoginState extends State<Login> {
   final TextEditingController passwordControl = TextEditingController();
   String email = '';
   String password = '';
+  LinearGradient blurGradient =
+      LinearGradient(begin: Alignment.topRight, end: Alignment.topLeft,
+          //stops: [.100, .9],
+          colors: [Color(0xff818279), Color(0xffb2b2ad)]);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+        body: Container(
+      child: ListView(
         children: [
-          const SizedBox(height: 35),
-          const Image(
-            image: AssetImage('images/logo.png'),
-            width: 200,
-            height: 200,
+          Container(
+            child: Image(
+              image: AssetImage('images/logo.png'),
+              width: 200,
+              height: 200,
+            ),
+            height: sizeFromHeight(context, 3.5),
+            // color: redGradient,
+            decoration: BoxDecoration(
+              //borderRadius: BorderRadius.circular(5),
+              gradient: blurGradient,
+            ),
+            width: double.infinity,
           ),
+          const SizedBox(height: 35),
           const Center(
               child: Text(
             'Login',
@@ -68,7 +82,7 @@ class _LoginState extends State<Login> {
                       decoration: InputDecoration(
                         hintText: 'Please Enter Your Email',
                         filled: true,
-                        fillColor: const Color(0xffb2b2ad),
+                        fillColor: const Color(0xffe0e1df),
                         focusedBorder: OutlineInputBorder(
                           borderSide: const BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(30),
@@ -87,7 +101,7 @@ class _LoginState extends State<Login> {
                       height: 10,
                     ),
                     TextFormField(
-                      controller: nameControl,
+                      controller: passwordControl,
                       validator: (value) {
                         if (value!.isEmpty) {
                           return 'Enter password';
@@ -97,7 +111,7 @@ class _LoginState extends State<Login> {
                       decoration: InputDecoration(
                         hintText: 'Please Enter Your password',
                         filled: true,
-                        fillColor: const Color(0xffb2b2ad),
+                        fillColor: const Color(0xffe0e1df),
                         focusedBorder: OutlineInputBorder(
                           borderSide: const BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(30),
@@ -117,24 +131,28 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Loginbuton(
-                  txt: 'Login',
-                  ontab: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => PasswordRecovery()));
-                  },
-                )
+                    txt: 'Login',
+                    ontab: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CategoryView()));
+                    },
+                    color: Colors.white)
               ],
             ),
           ),
           SizedBox(
             height: sizeFromHeight(context, 20),
           ),
-          TextButton(onPressed: () {},
-              child: const Text('Forget Password ?',style: TextStyle(color: Color(0xffd1aa5f)),))
+          TextButton(
+              onPressed: () {},
+              child: const Text(
+                'Forget Password ?',
+                style: TextStyle(color: Color(0xffd1aa5f), fontSize: 15),
+              ))
         ],
       ),
-    );
+    ));
   }
 }
