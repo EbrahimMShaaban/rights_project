@@ -22,29 +22,25 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
         key: formKey,
         child: Column(
           children: [
-
-            Row(
-              children: [
-                const Image(
-                  image: AssetImage('images/curve.png'),
-                  height: 140,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.only(top: 30,right: 20),
+                  child: Text(
+                    'معلومات التوعية',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-                Column(
-                  children: const [
-                    Text(
-                      'معلومات التوعية',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Divider(
-                      height: 20,
-                      thickness: 1,
-                      endIndent: 2,
-                      color: Colors.deepOrange,
-                    ),
-                  ],
+                Divider(
+                  indent: 120,
+                  height: 15,
+                  thickness: 3,
+                  endIndent: 120,
+                  color: Color(0xffd1aa5f),
                 ),
               ],
             ),
