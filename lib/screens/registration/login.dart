@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rights_project/screens/admin_sceen/category_view.dart';
 import 'package:rights_project/style.dart';
 
+import '../../widgets/compnant.dart';
 import '../../widgets/login_button.dart';
 
 class Login extends StatefulWidget {
@@ -71,27 +72,16 @@ class _LoginState extends State<Login> {
                     const SizedBox(
                       height: 10,
                     ),
-                    TextFormField(
+                    defualtTextFormField(
                       controller: nameControl,
-                      validator: (value) {
+                      validate: (value) {
                         if (value!.isEmpty) {
                           return 'Enter Email';
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
-                        hintText: 'Please Enter Your Email',
-                        filled: true,
-                        fillColor: const Color(0xffe0e1df),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                      ),
+                      hint: 'Enter Your name',
+                      type: TextInputType.emailAddress,
                     ),
                     const SizedBox(
                       height: 15,
@@ -100,28 +90,17 @@ class _LoginState extends State<Login> {
                     const SizedBox(
                       height: 10,
                     ),
-                    TextFormField(
+                    defualtTextFormField(
                       controller: passwordControl,
-                      validator: (value) {
+                      validate: (value) {
                         if (value!.isEmpty) {
                           return 'Enter password';
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
-                        hintText: 'Please Enter Your password',
-                        filled: true,
-                        fillColor: const Color(0xffe0e1df),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                      ),
-                    )
+                      hint: 'Enter Your password',
+                      type: TextInputType.emailAddress,
+                    ),
                   ],
                 ),
               )),
@@ -145,14 +124,12 @@ class _LoginState extends State<Login> {
           SizedBox(
             height: sizeFromHeight(context, 20),
           ),
-          TextButton(
-              onPressed: () {},
-              child: const Text(
-                'Forget Password ?',
-                style: TextStyle(color: Color(0xffd1aa5f), fontSize: 15),
-              ))
+          defualtTextButton( txt: 'Forget Password ',onPressed: (){})
         ],
       ),
     ));
   }
+
+
+
 }

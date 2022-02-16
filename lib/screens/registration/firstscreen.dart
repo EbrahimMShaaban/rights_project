@@ -4,6 +4,7 @@ import 'package:rights_project/screens/registration/login.dart';
 import 'package:rights_project/style.dart';
 
 import '../../widgets/login_button.dart';
+import '../lawyer_screen/lawyer_category.dart';
 
 class Firstscreen extends StatelessWidget {
   const Firstscreen({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class Firstscreen extends StatelessWidget {
             Loginbuton(
               ontab: () {
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const Firstscreen()));
+                    MaterialPageRoute(builder: (context) => const LawyerCategory()));
               },
               txt: 'Sign Up',color: const Color(0xffd1aa5f)
             ),
