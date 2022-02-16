@@ -33,28 +33,28 @@ class _CategoryState extends State<CategoryView> {
                       builder: (context) => const Userview(itemname: 'إدارة المحامين',)
                   ));
                 },
-                txt: 'إدارة المحامين',
+                txt: 'Lawyer management',
                 color: const Color(0xffd1aa5f)),
             Loginbuton(
                 ontab: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const Userview(itemname: 'إدارة المستخدمين',)));
                 },
-                txt: 'إدارة المستخدمين',
+                txt: 'User management',
                 color: const Color(0xffd1aa5f)),
             Loginbuton(
                 ontab: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const MapScreen()));
                 },
-                txt: 'إدارة الأماكن',
+                txt: 'Place management',
                 color: const Color(0xffd1aa5f)),
             Loginbuton(
                 ontab: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const AwarenessInfoScreen()));
                 },
-                txt: 'إدارة معلومات التوعية',
+                txt: 'Awareness Information Department',
                 color: const Color(0xffd1aa5f)),
           ],
         ),
