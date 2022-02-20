@@ -66,7 +66,7 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
         showModalBottomSheet(
           context: context,
           builder: (BuildContext context) {
-            return Container(
+            return SizedBox(
               height:  400,
               child: Center(
                 child: Column(

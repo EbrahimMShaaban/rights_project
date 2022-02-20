@@ -3,6 +3,7 @@ import 'package:rights_project/widgets/compnant.dart';
 
 import '../../style.dart';
 import '../../widgets/login_button.dart';
+import '../navigation.dart';
 
 class LoginLawyerScreen extends StatefulWidget {
   const LoginLawyerScreen({Key? key}) : super(key: key);
@@ -183,10 +184,18 @@ class _LoginLawyerScreenState extends State<LoginLawyerScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Loginbuton(txt: 'Sign Up ', color: Colors.white, ontab: () {}),
-                  const SizedBox(height: 20,),
-
-
+                  Loginbuton(
+                      txt: 'Sign Up ',
+                      color: Colors.white,
+                      ontab: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const NavigationScreen()));
+                      }),
+                  const SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
             )

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../style.dart';
 import '../../widgets/compnant.dart';
-import '../../widgets/login_button.dart';
 import 'login_screen.dart';
 
 class LawyerCategory extends StatefulWidget {
