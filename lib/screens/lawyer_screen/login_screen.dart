@@ -5,14 +5,14 @@ import '../../style.dart';
 import '../../widgets/login_button.dart';
 import '../navigation.dart';
 
-class LoginLawyerScreen extends StatefulWidget {
-  const LoginLawyerScreen({Key? key}) : super(key: key);
+class RegisterLawyerScreen extends StatefulWidget {
+  const RegisterLawyerScreen({Key? key}) : super(key: key);
 
   @override
-  _LoginLawyerScreenState createState() => _LoginLawyerScreenState();
+  _RegisterLawyerScreenState createState() => _RegisterLawyerScreenState();
 }
 
-class _LoginLawyerScreenState extends State<LoginLawyerScreen> {
+class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController nameControl = TextEditingController();
   final TextEditingController emailControl = TextEditingController();

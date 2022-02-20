@@ -34,7 +34,7 @@ class _LawyerCategoryState extends State<LawyerCategory> {
               ),
               InkWell(
                 onTap: (){
-                  navigateAndFinish(context, LoginLawyerScreen());
+                  navigateAndFinish(context, RegisterLawyerScreen());
                 },
                 child: const Image(
                   image: AssetImage('images/lawyer_image.png'),
