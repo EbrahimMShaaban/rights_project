@@ -31,53 +31,25 @@ class Homeview extends StatelessWidget {
                     fit: BoxFit.cover),
               ),
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: InkWell(
-                    onTap: (){},
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Center(
-                          child: Image(
-                            image:const AssetImage('images/search.png'),
-                            width: sizeFromWidth(context, 1.1),
-                            height: sizeFromHeight(context, 4),
-                          ),
-                        ),
-                        const Center(
-                            child:  Text(
-                              'Find a destination training',
-                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                            )),
-                      ],
+            InkWell(
+              onTap: (){},
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Center(
+                    child: Image(
+                      image:const AssetImage('images/myrequest.png'),
+                      width: sizeFromWidth(context, 1.1),
+                      height: sizeFromHeight(context, 4),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: InkWell(
-                    onTap: (){},
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Center(
-                          child: Image(
-                            image:const AssetImage('images/myrequest.png'),
-                            width: sizeFromWidth(context, 1.1),
-                            height: sizeFromHeight(context, 4),
-                          ),
-                        ),
-                        const Center(
-                            child:  Text(
-                              'My Request',
-                              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                            )),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+                  const Center(
+                      child:  Text(
+                        'My Request',
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      )),
+                ],
+              ),
             ),
 
           ],
