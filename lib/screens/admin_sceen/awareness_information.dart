@@ -28,7 +28,7 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
                 Padding(
                   padding: EdgeInsets.only(top: 30,right: 20),
                   child: Text(
-                    'معلومات التوعية',
+                    'Awareness Information',
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -36,10 +36,10 @@ class _AwarenessInfoScreenState extends State<AwarenessInfoScreen> {
                   ),
                 ),
                 Divider(
-                  indent: 120,
+                  indent: 80,
                   height: 15,
                   thickness: 3,
-                  endIndent: 120,
+                  endIndent: 90,
                   color: Color(0xffd1aa5f),
                 ),
               ],

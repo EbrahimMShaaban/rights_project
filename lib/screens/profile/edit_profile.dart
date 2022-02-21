@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:rights_project/screens/profile/reviewitem.dart';
-import 'package:rights_project/widgets/compnant.dart';
 
-import 'edit_profile.dart';
+class EditProfile extends StatefulWidget {
+  const EditProfile({Key? key}) : super(key: key);
 
-class Profileview extends StatelessWidget {
-  const Profileview({Key? key}) : super(key: key);
+  @override
+  _EditProfileState createState() => _EditProfileState();
+}
 
+class _EditProfileState extends State<EditProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
@@ -28,7 +28,7 @@ class Profileview extends StatelessWidget {
                         backgroundColor: Colors.white,
                         child: IconButton(
                           onPressed: () {
-                            navigateTo(context, EditProfile());
+                            Navigator.pop(context);
                           },
                           icon: const Icon(Icons.settings_sharp),
                           color: const Color(0xffd1aa5f),
@@ -40,7 +40,7 @@ class Profileview extends StatelessWidget {
                 child: Column(
                   children: const [
                     Text(
-                      'My Profile ',
+                      'My profile',
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
@@ -64,10 +64,10 @@ class Profileview extends StatelessWidget {
               Column(
                 children: const [
                   Text(
-                    'Mohamed',
+                    'Ebrahim',
                     style: TextStyle(fontSize: 22),
                   ),
-                  Text('@Mohamed'),
+                  Text('@Ebrahim'),
                 ],
               ),
               Stack(
@@ -99,92 +99,16 @@ class Profileview extends StatelessWidget {
           ),
           const Center(
             child: Text(
-              'محمد للمرافعات الشرعية والقانونية مختص بالمحاكم',
-              style: TextStyle(
+              '''خالد طالب حقوق في جامعة الملك سعود المستوى التاسع
+            5/4.5 المعدل'''
+              ,style: TextStyle(
                 fontSize: 16,
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Icon(
-                Icons.star,
-                color: Color(0xffd1aa5f),
-              ),
-              Icon(
-                Icons.star,
-                color: Color(0xffd1aa5f),
-              ),
-              Icon(
-                Icons.star,
-                color: Color(0xffd1aa5f),
-              ),
-              Icon(
-                Icons.star,
-                color: Color(0xffd1aa5f),
-              ),
-              Icon(
-                Icons.star,
-                color: Color(0xffd1aa5f),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                children: const [
-                  Text(
-                    '200',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Text(
-                    'اتعاب المحاماة',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ],
-              ),
-              Column(
-                children: const [
-                  Text(
-                    '50',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Text(
-                    'عدد الاستشارات',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              'Reviews (0)',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          const Divider(
-            thickness: 2,
-            indent: 10,
-            endIndent: 290,
-            color: Color(0xffd1aa5f),
-          ),
-          Expanded(
-            child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return ReviewItem();
-                }),
-          )
+         const SizedBox(height: 20,),
+         const Image(image: AssetImage('images/cv.png'),width: 150,height: 150,),
+
         ],
       ),
     );

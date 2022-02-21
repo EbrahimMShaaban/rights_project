@@ -22,7 +22,7 @@ final String itemname;
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => const Userdetails()));
               },
-              bookName: 'محامي',
+              bookName: 'Lawyer',
             );
           }),
     );

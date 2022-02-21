@@ -6,7 +6,7 @@ class ReviewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Card(
-        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -23,13 +23,13 @@ class ReviewItem extends StatelessWidget {
               Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
+                  children:const [
                     Text('Faisal'),
                   ]),
             ]),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text('كانت تجربة بنت ستين كلب'),
+            const Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 10),
+              child: Text('كانت تجربة جيده'),
             ),
           ],
         ),

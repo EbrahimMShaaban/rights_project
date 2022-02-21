@@ -30,7 +30,7 @@ class _CategoryState extends State<CategoryView> {
             Loginbuton(
                 ontab: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const Userview(itemname: 'إدارة المحامين',)
+                      builder: (context) => const Userview(itemname: 'Lawyer management',)
                   ));
                 },
                 txt: 'Lawyer management',
@@ -38,7 +38,7 @@ class _CategoryState extends State<CategoryView> {
             Loginbuton(
                 ontab: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const Userview(itemname: 'إدارة المستخدمين',)));
+                      builder: (context) => const Userview(itemname: 'User management',)));
                 },
                 txt: 'User management',
                 color: const Color(0xffd1aa5f)),

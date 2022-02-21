@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../style.dart';
 import '../../widgets/compnant.dart';
-import 'login_screen.dart';
+import 'register_screen.dart';
 
 class LawyerCategory extends StatefulWidget {
   const LawyerCategory({Key? key}) : super(key: key);

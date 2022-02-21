@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rights_project/screens/registration/login.dart';
 import 'package:rights_project/widgets/compnant.dart';
 
 import '../../style.dart';
@@ -56,7 +57,9 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
               ),
             ),
             defualtTextButton(
-                txt: 'Already Registered? Login', onPressed: () {}),
+                txt: 'Already Registered? Login', onPressed: () {
+                  navigateTo(context,const Login());
+            }),
             const SizedBox(
               height: 15,
             ),
@@ -65,7 +68,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('PLEASE ENTER YOUR NAME'),
                   const SizedBox(
                     height: 10,
                   ),
@@ -82,7 +84,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text('PLEASE ENTER YOUR EMAIL'),
                   const SizedBox(
                     height: 10,
                   ),
@@ -99,7 +100,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text('PLEASE ENTER YOUR NUMBER'),
                   const SizedBox(
                     height: 10,
                   ),
@@ -116,7 +116,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text('PLEASE ENTER YOUR PASSWORD'),
                   const SizedBox(
                     height: 10,
                   ),
@@ -133,7 +132,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text('PLEASE ENTER YOUR DATA'),
                   const SizedBox(
                     height: 10,
                   ),
@@ -150,7 +148,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text('PLEASE ENTER YOUR  ID NUMBER'),
                   const SizedBox(
                     height: 10,
                   ),
@@ -167,7 +164,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text('PLEASE ENTER YOUR TRAINING  LICENSE  NUMBER'),
                   const SizedBox(
                     height: 10,
                   ),

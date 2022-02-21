@@ -41,10 +41,10 @@ class _NavigationScreenState extends State<NavigationScreen> {
             });
           },
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.email), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.notifications), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.email), label: 'Chat'),
+            BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'notifications '),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
           ]),
     );
   }

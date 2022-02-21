@@ -4,6 +4,8 @@ import 'package:rights_project/style.dart';
 
 import '../../widgets/compnant.dart';
 import '../../widgets/login_button.dart';
+import '../navigation.dart';
+import 'forgetpass.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -68,9 +70,8 @@ class _LoginState extends State<Login> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Please Enter Your Email'),
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     defualtTextFormField(
                       controller: nameControl,
@@ -84,12 +85,9 @@ class _LoginState extends State<Login> {
                       type: TextInputType.emailAddress,
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 30,
                     ),
-                    const Text('Please Enter Your password'),
-                    const SizedBox(
-                      height: 10,
-                    ),
+
                     defualtTextFormField(
                       controller: passwordControl,
                       validate: (value) {
@@ -105,7 +103,7 @@ class _LoginState extends State<Login> {
                 ),
               )),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -115,7 +113,7 @@ class _LoginState extends State<Login> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CategoryView()));
+                              builder: (context) => NavigationScreen()));
                     },
                     color: Colors.white)
               ],
@@ -124,7 +122,9 @@ class _LoginState extends State<Login> {
           SizedBox(
             height: sizeFromHeight(context, 20),
           ),
-          defualtTextButton( txt: 'Forget Password ',onPressed: (){})
+          defualtTextButton( txt: 'Forget Password ',onPressed: (){
+            navigateTo(context, ForgetPassword());
+          })
         ],
       ),
     ));
