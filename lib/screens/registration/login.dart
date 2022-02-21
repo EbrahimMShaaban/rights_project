@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rights_project/screens/admin_sceen/category_view.dart';
+import 'package:rights_project/screens/navigation.dart';
 import 'package:rights_project/style.dart';
 
 import '../../widgets/compnant.dart';
 import '../../widgets/login_button.dart';
-import '../navigation.dart';
 import 'forgetpass.dart';
 
 class Login extends StatefulWidget {

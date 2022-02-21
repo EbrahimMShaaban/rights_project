@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:rights_project/screens/profile/editprofille.dart';
 import 'package:rights_project/screens/profile/reviewitem.dart';
 import 'package:rights_project/widgets/compnant.dart';
 
-import 'edit_profile.dart';
+
 
 class Profileview extends StatelessWidget {
   const Profileview({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class Profileview extends StatelessWidget {
                         backgroundColor: Colors.white,
                         child: IconButton(
                           onPressed: () {
-                            navigateTo(context, EditProfile());
+                            navigateTo(context, const Profileedit());
                           },
                           icon: const Icon(Icons.settings_sharp),
                           color: const Color(0xffd1aa5f),

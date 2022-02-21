@@ -1,27 +1,32 @@
 import 'package:flutter/material.dart';
 
-TextFormField defualtTextFormField({
+Padding defualtTextFormField({
   required TextEditingController controller,
   required TextInputType type,
   bool isPassword = false,
   required FormFieldValidator validate,
   required String hint,
+   int maxlines=1,
 }) {
-  return TextFormField(
-    controller: controller,
-    validator: validate,
-    obscureText: isPassword,
-    decoration: InputDecoration(
-      hintText: hint,
-      filled: true,
-      fillColor: const Color(0xffe0e1df),
-      focusedBorder: OutlineInputBorder(
-        borderSide: const BorderSide(color: Colors.white),
-        borderRadius: BorderRadius.circular(30),
-      ),
-      enabledBorder: OutlineInputBorder(
-        borderSide: const BorderSide(color: Colors.white),
-        borderRadius: BorderRadius.circular(30),
+  return Padding(
+    padding: const EdgeInsets.all(5),
+    child: TextFormField(
+      maxLines: maxlines,
+      controller: controller,
+      validator: validate,
+      obscureText: isPassword,
+      decoration: InputDecoration(
+        hintText: hint,
+        filled: true,
+        fillColor: const Color(0xffe0e1df),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(30),
+        ),
       ),
     ),
   );
