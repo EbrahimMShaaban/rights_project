@@ -64,6 +64,7 @@ flutter:
    - images/profile.png
    - images/lawyer_image.png
    - images/search.png
+   - images/Execute.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

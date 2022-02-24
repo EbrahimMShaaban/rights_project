@@ -4,30 +4,26 @@ import 'package:rights_project/widgets/compnant.dart';
 
 import '../../style.dart';
 import '../../widgets/login_button.dart';
-import '../navigation.dart';
+import 'navigationbar.dart';
 
-class RegisterLawyerScreen extends StatefulWidget {
-  const RegisterLawyerScreen({Key? key}) : super(key: key);
+class ClientRegister extends StatefulWidget {
+  const ClientRegister({Key? key}) : super(key: key);
 
   @override
-  _RegisterLawyerScreenState createState() => _RegisterLawyerScreenState();
+  _ClientRegisterState createState() => _ClientRegisterState();
 }
 
-class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
+class _ClientRegisterState extends State<ClientRegister> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController nameControl = TextEditingController();
   final TextEditingController emailControl = TextEditingController();
   final TextEditingController passwordControl = TextEditingController();
   final TextEditingController phoneControl = TextEditingController();
   final TextEditingController dataControl = TextEditingController();
-  final TextEditingController idControl = TextEditingController();
-  final TextEditingController licenseControl = TextEditingController();
-  String email = '';
-  String password = '';
   LinearGradient blurGradient =
-      const LinearGradient(begin: Alignment.topRight, end: Alignment.topLeft,
-          //stops: [.100, .9],
-          colors: [Color(0xff818279), Color(0xffb2b2ad)]);
+  const LinearGradient(begin: Alignment.topRight, end: Alignment.topLeft,
+      //stops: [.100, .9],
+      colors: [Color(0xff818279), Color(0xffb2b2ad)]);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +56,7 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
             ),
             defualtTextButton(
                 txt: 'Already Registered? Login', onPressed: () {
-                  navigateTo(context,const Login());
+              navigateTo(context,const Login());
             }),
             const SizedBox(
               height: 15,
@@ -86,12 +82,9 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
                   defualtTextFormField(
                       controller: emailControl,
-                      type: TextInputType.name,
+                      type: TextInputType.emailAddress,
                       validate: (value) {
                         if (value!.isEmpty) {
                           return 'Enter Your Email';
@@ -99,9 +92,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                         return null;
                       },
                       hint: 'Enter Your Email'),
-                  const SizedBox(
-                    height: 10,
-                  ),
                   const SizedBox(
                     height: 10,
                   ),
@@ -118,9 +108,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
                   defualtTextFormField(
                       controller: passwordControl,
                       type: TextInputType.visiblePassword,
@@ -134,51 +121,20 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
                   defualtTextFormField(
                       controller: dataControl,
                       type: TextInputType.datetime,
                       validate: (value) {
                         if (value!.isEmpty) {
-                          return 'Enter Your data';
+                          return 'Enter Your Data';
                         }
                         return null;
                       },
-                      hint: 'Enter Your data'),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  defualtTextFormField(
-                      controller: idControl,
-                      type: TextInputType.number,
-                      validate: (value) {
-                        if (value!.isEmpty) {
-                          return 'Enter Your Id Number';
-                        }
-                        return null;
-                      },
-                      hint: 'Enter Your Id Number'),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  defualtTextFormField(
-                      controller: licenseControl,
-                      type: TextInputType.number,
-                      validate: (value) {
-                        if (value!.isEmpty) {
-                          return 'Enter Your Training license number';
-                        }
-                        return null;
-                      },
-                      hint: 'Enter Your Training license number'),
+                      hint: 'Enter Your Data'),
                   const SizedBox(
                     height: 20,
                   ),
+
                   Loginbuton(
                       txt: 'Sign Up ',
                       color: Colors.white,
@@ -186,7 +142,7 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const NavigationScreen()));
+                                builder: (context) => const ClientNavScreen()));
                       }),
                   const SizedBox(
                     height: 20,

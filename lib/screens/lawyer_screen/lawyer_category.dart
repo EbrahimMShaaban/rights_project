@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../style.dart';
 import '../../widgets/compnant.dart';
+import '../client_screen/client_register.dart';
 import 'register_screen.dart';
 
 class LawyerCategory extends StatefulWidget {
@@ -53,7 +54,9 @@ class _LawyerCategoryState extends State<LawyerCategory> {
               ),
              const SizedBox(height: 20,),
               InkWell(
-                onTap: (){},
+                onTap: (){
+                  navigateTo(context, ClientRegister());
+                },
                 child: const Image(
                   image: AssetImage('images/clint_image.png'),
                   width: 300,
