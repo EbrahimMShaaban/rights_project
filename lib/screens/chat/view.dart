@@ -1,4 +1,7 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:rights_project/screens/chat/chatscreen.dart';
 
 import '../../widgets/compnant.dart';
 
@@ -68,7 +71,7 @@ class _ChatviewState extends State<Chatview> {
             Expanded(
               child: ListView.separated(
                   itemBuilder: (context, index) => buildItems(
-                        circleAvatar:const CircleAvatar(
+                        circleAvatar: const CircleAvatar(
                           backgroundImage: AssetImage('images/person.png'),
                         ),
                         context: context,
@@ -89,7 +92,10 @@ class _ChatviewState extends State<Chatview> {
                             ),
                           ],
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) => const Chatscreen()));
+                        },
                       ),
                   separatorBuilder: (BuildContext context, int index) =>
                       const SizedBox(),
