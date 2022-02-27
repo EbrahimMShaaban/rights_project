@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rights_project/style.dart';
 
 class ClientHome extends StatefulWidget {
   const ClientHome({Key? key}) : super(key: key);
@@ -17,11 +18,12 @@ class _ClientHomeState extends State<ClientHome> {
         body: Column(
           children: [
             Container(
-              decoration: BoxDecoration(
-                color: const Color(0xff3f3b43),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              height: 170,
+              decoration: const BoxDecoration(
+                  color: Color(0xff3f3b43),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20))),
+              height: sizeFromHeight(context, 5),
               child: Column(
                 children: [
                   Expanded(

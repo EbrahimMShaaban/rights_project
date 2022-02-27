@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rights_project/screens/navigation.dart';
+import 'package:rights_project/screens/client_screen/navigationbar.dart';
 import 'package:rights_project/style.dart';
 
 import '../../widgets/compnant.dart';
@@ -112,7 +112,7 @@ class _LoginState extends State<Login> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => NavigationScreen()));
+                              builder: (context) => ClientNavScreen()));
                     },
                     color: Colors.white)
               ],
