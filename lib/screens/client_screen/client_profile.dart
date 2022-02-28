@@ -115,7 +115,8 @@ class ClientProfile extends StatelessWidget {
               ),
               //TOdo : TEST DIVIDER
 
-              Divider(thickness: 2,color: brown),
+             // Divider(thickness: 2,color: brown),
+              VerticalDivider(thickness: 2,color: brown),
               Column(
                 children: const [
                   Text(
