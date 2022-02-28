@@ -1,8 +1,3 @@
-
-
-
-
-
 import 'package:flutter/material.dart';
 import 'package:rights_project/style.dart';
 
@@ -14,10 +9,9 @@ class Chatscreen extends StatelessWidget {
       height: 100,
       color: brown,
       child: Row(
-
-        mainAxisAlignment:MainAxisAlignment.spaceAround ,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-           Icon(Icons.add,color: gold, size: 40),
+          Icon(Icons.add, color: gold, size: 40),
           Container(
             height: 80,
             width: 250,
@@ -25,8 +19,6 @@ class Chatscreen extends StatelessWidget {
               maxLines: 3,
               // controller: _controller,
               decoration: InputDecoration(
-
-
                 fillColor: Colors.white,
                 filled: true,
                 //hintText: 'اكتب الان',
@@ -45,8 +37,8 @@ class Chatscreen extends StatelessWidget {
               // },
             ),
           ),
-          Icon(Icons.camera_alt_outlined,color: gold, size: 40),
-          Icon(Icons.keyboard_voice,color: gold, size: 40),
+          Icon(Icons.camera_alt_outlined, color: gold, size: 40),
+          Icon(Icons.keyboard_voice, color: gold, size: 40),
         ],
       ),
     );
@@ -63,13 +55,17 @@ class Chatscreen extends StatelessWidget {
                 height: 100,
                 child: Row(
                   children: const [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('images/profile.png'),
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('images/profile.png'),
+                      ),
                     ),
                     Expanded(
                       child: Text(
                         'hi,i love youuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',
                         maxLines: 3,
+                        style: TextStyle(fontSize: 18),
                         overflow: TextOverflow.clip,
                       ),
                     ),
@@ -89,6 +85,19 @@ class Chatscreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: brown,
+        //todo : اظبط الصورة عاالبرنامج
+        title: const Image(
+            image: AssetImage('images/logo.png'),
+            height: 100,
+            fit: BoxFit.contain),
+        centerTitle: true,
+        actions: const [
+          Icon(Icons.call,size: 30),
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(Icons.videocam,size: 30),
+          ),
+        ],
       ),
       body: Chatbody(),
     );

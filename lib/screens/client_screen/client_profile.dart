@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rights_project/screens/profile/editprofille.dart';
+import 'package:rights_project/style.dart';
 import 'package:rights_project/widgets/compnant.dart';
 
 
@@ -112,6 +113,9 @@ class ClientProfile extends StatelessWidget {
                   ),
                 ],
               ),
+              //TOdo : TEST DIVIDER
+
+              Divider(thickness: 2,color: brown),
               Column(
                 children: const [
                   Text(
