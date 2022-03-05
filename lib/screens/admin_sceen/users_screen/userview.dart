@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:rights_project/screens/admin_sceen/users_screen/user_details.dart';
 import 'package:rights_project/screens/admin_sceen/users_screen/user_item.dart';
 
+import '../../profile/view.dart';
+
 class Userview extends StatelessWidget {
   const Userview({Key? key,required this.itemname}) : super(key: key);
 final String itemname;
@@ -20,7 +22,7 @@ final String itemname;
             return Useritem(
               ontab: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const Userdetails()));
+                    MaterialPageRoute(builder: (context) => const Profileview()));
               },
               bookName: 'Lawyer',
             );

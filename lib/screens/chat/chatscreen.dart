@@ -21,7 +21,7 @@ class Chatscreen extends StatelessWidget {
               decoration: InputDecoration(
                 fillColor: Colors.white,
                 filled: true,
-                //hintText: 'اكتب الان',
+                hintText: '....اكتب الان',
                 // hintStyle: hintStyle,
                 focusedBorder: OutlineInputBorder(
                   borderSide: const BorderSide(color: Colors.white),
@@ -63,7 +63,7 @@ class Chatscreen extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        'hi,i love youuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',
+                        'hi,i love youuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',
                         maxLines: 3,
                         style: TextStyle(fontSize: 18),
                         overflow: TextOverflow.clip,

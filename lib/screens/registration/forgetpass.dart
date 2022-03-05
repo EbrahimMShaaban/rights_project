@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rights_project/screens/registration/login.dart';
 
 import '../../style.dart';
 import '../../widgets/compnant.dart';
@@ -62,7 +63,9 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                         },
                         hint: 'PLEASE ENTER YOUR EMAIL'),
                     const SizedBox(height: 40,),
-                    Loginbuton(txt: 'send', color: Colors.white, ontab:(){})
+                    Loginbuton(txt: 'send', color: Colors.white, ontab:(){
+                      navigateTo(context, const Login());
+                    })
 
 
                   ],

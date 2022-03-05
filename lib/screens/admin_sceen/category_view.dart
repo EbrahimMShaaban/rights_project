@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rights_project/screens/admin_sceen/awareness_information.dart';
 import 'package:rights_project/screens/admin_sceen/map.dart';
 import 'package:rights_project/screens/admin_sceen/users_screen/userview.dart';
+import 'package:rights_project/screens/registration/login.dart';
+import 'package:rights_project/widgets/compnant.dart';
 
 
 import 'package:rights_project/widgets/login_button.dart';
@@ -55,6 +57,12 @@ class _CategoryState extends State<CategoryView> {
                       builder: (context) => const AwarenessInfoScreen()));
                 },
                 txt: 'Awareness Information Department',
+                color: const Color(0xffd1aa5f)),
+            Loginbuton(
+                ontab: () {
+                  navigateAndFinish(context, const Login());
+                },
+                txt: 'Log out',
                 color: const Color(0xffd1aa5f)),
           ],
         ),

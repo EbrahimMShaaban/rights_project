@@ -84,10 +84,7 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                       },
                       hint: 'Enter Your Name'),
                   const SizedBox(
-                    height: 10,
-                  ),
-                  const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   defualtTextFormField(
                       controller: emailControl,
@@ -100,10 +97,7 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                       },
                       hint: 'Enter Your Email'),
                   const SizedBox(
-                    height: 10,
-                  ),
-                  const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   defualtTextFormField(
                       controller: phoneControl,
@@ -116,10 +110,7 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                       },
                       hint: 'Enter Your Number'),
                   const SizedBox(
-                    height: 10,
-                  ),
-                  const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   defualtTextFormField(
                       controller: passwordControl,
@@ -132,11 +123,9 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                       },
                       hint: 'Enter Your password'),
                   const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
+
                   defualtTextFormField(
                       controller: dataControl,
                       type: TextInputType.datetime,
@@ -146,13 +135,11 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                         }
                         return null;
                       },
-                      hint: 'Enter Your data'),
+                      hint: 'Enter Your date'),
                   const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
+
                   defualtTextFormField(
                       controller: idControl,
                       type: TextInputType.number,
@@ -164,7 +151,7 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                       },
                       hint: 'Enter Your Id Number'),
                   const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   defualtTextFormField(
                       controller: licenseControl,

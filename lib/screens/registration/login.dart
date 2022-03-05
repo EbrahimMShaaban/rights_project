@@ -4,6 +4,8 @@ import 'package:rights_project/style.dart';
 
 import '../../widgets/compnant.dart';
 import '../../widgets/login_button.dart';
+import '../admin_sceen/category_view.dart';
+import '../lawyer_screen/register_screen.dart';
 import 'forgetpass.dart';
 
 class Login extends StatefulWidget {
@@ -112,18 +114,24 @@ class _LoginState extends State<Login> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ClientNavScreen()));
+                              builder: (context) => CategoryView()));
                     },
                     color: Colors.white)
               ],
             ),
           ),
-          SizedBox(
-            height: sizeFromHeight(context, 20),
-          ),
-          defualtTextButton( txt: 'Forget Password ',onPressed: (){
-            navigateTo(context, ForgetPassword());
-          })
+        Column(
+
+          children: [
+
+            defualtTextButton( txt: 'Forget Password ',onPressed: (){
+              navigateTo(context, const ForgetPassword());
+            }),
+            defualtTextButton( txt: 'sign up ',onPressed: (){
+              navigateTo(context, const RegisterLawyerScreen());
+            })          ],
+        )
+
         ],
       ),
     ));

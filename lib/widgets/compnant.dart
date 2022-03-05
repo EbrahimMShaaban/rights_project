@@ -82,28 +82,31 @@ Column buildItems({
           color: Colors.white70,
           // boxShadow: const [BoxShadow(color: white, blurRadius: 6)],
         ),
-        child: Row(
-          children: [
-            Container(
-              child: circleAvatar,
-            ),
-            SizedBox(width: 10,),
-            Expanded(
-              child: Text(txt!),
-            ),
-            Expanded(
-              child: SizedBox(
-                width: sizeFromWidth(context, 2),
+        child: InkWell(
+          onTap: onTap,
+          child: Row(
+            children: [
+              Container(
+                child: circleAvatar,
               ),
-            ),
-            InkWell(
-              onTap: onTap,
-              child: child,
-            ),
-            SizedBox(
-              width: sizeFromWidth(context, 25),
-            ),
-          ],
+              SizedBox(width: 10,),
+              Expanded(
+                child: Text(txt!),
+              ),
+              Expanded(
+                child: SizedBox(
+                  width: sizeFromWidth(context, 2),
+                ),
+              ),
+              InkWell(
+                onTap: onTap,
+                child: child,
+              ),
+              SizedBox(
+                width: sizeFromWidth(context, 25),
+              ),
+            ],
+          ),
         ),
       ),
     ],

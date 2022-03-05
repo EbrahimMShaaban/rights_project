@@ -49,7 +49,7 @@ class ClientProfile extends StatelessWidget {
                     ),
                     Divider(
                       height: 10,
-                      thickness: 1,
+                      thickness: 2,
                       endIndent: 25,
                       indent: 40,
                       color: Color(0xffd1aa5f),

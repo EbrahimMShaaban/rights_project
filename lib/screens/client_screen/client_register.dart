@@ -126,7 +126,7 @@ class _ClientRegisterState extends State<ClientRegister> {
                       type: TextInputType.datetime,
                       validate: (value) {
                         if (value!.isEmpty) {
-                          return 'Enter Your Data';
+                          return 'Enter Your Date';
                         }
                         return null;
                       },
