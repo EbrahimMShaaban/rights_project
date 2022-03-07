@@ -12,11 +12,12 @@ class FreshView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         backgroundColor: const Color(0xff3f3b43),
         actions:  [
           IconButton(
               onPressed: () {
-                navigateTo(context, Notificationview());
+                navigateTo(context, const Notificationview());
               },
               icon:const Icon(Icons.notifications),),
         const  SizedBox(

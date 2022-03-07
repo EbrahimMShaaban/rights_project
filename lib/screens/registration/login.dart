@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:rights_project/screens/client_screen/navigationbar.dart';
+import 'package:rights_project/screens/lawyer_screen/lawyer_category.dart';
 import 'package:rights_project/style.dart';
 
 import '../../widgets/compnant.dart';
 import '../../widgets/login_button.dart';
 import '../admin_sceen/category_view.dart';
-import '../lawyer_screen/register_screen.dart';
 import 'forgetpass.dart';
 
 class Login extends StatefulWidget {
@@ -128,7 +127,7 @@ class _LoginState extends State<Login> {
               navigateTo(context, const ForgetPassword());
             }),
             defualtTextButton( txt: 'sign up ',onPressed: (){
-              navigateTo(context, const RegisterLawyerScreen());
+              navigateTo(context, const LawyerCategory());
             })          ],
         )
 

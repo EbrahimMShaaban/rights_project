@@ -4,7 +4,6 @@ import '../../style.dart';
 import '../../widgets/compnant.dart';
 import '../client_screen/client_register.dart';
 import '../fresh_lawer/view.dart';
-import 'register_screen.dart';
 
 class LawyerCategory extends StatefulWidget {
   const LawyerCategory({Key? key}) : super(key: key);
@@ -34,11 +33,11 @@ class _LawyerCategoryState extends State<LawyerCategory> {
                 ),
                 height: sizeFromHeight(context, 3),
               ),
-              InkWell(
-                onTap: (){
-                  navigateAndFinish(context, RegisterLawyerScreen());
-                },
-                child: const Image(
+              const InkWell(
+                // onTap: (){
+                //   navigateAndFinish(context, const RegisterLawyerScreen());
+                // },
+                child: Image(
                   image: AssetImage('images/lawyer_image.png'),
                   width: 300,
                   height: 150,
@@ -47,7 +46,7 @@ class _LawyerCategoryState extends State<LawyerCategory> {
              const SizedBox(height: 20,),
               InkWell(
                 onTap: (){
-                  navigateTo(context, FreshView());
+                  navigateTo(context, const FreshView());
                 },
                 child: const Image(
                   image: AssetImage('images/fersh_lawyer.png'),
@@ -58,7 +57,7 @@ class _LawyerCategoryState extends State<LawyerCategory> {
              const SizedBox(height: 20,),
               InkWell(
                 onTap: (){
-                  navigateTo(context, ClientRegister());
+                  navigateTo(context, const ClientRegister());
                 },
                 child: const Image(
                   image: AssetImage('images/clint_image.png'),
