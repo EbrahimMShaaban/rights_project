@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:rights_project/providers/loginprov.dart';
 import 'package:rights_project/screens/registration/login.dart';
 import 'package:rights_project/widgets/compnant.dart';
 
@@ -31,7 +33,11 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<LoginProv>(context);
     return Scaffold(
+      appBar: AppBar(
+
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -59,9 +65,10 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
               ),
             ),
             defualtTextButton(
-                txt: 'Already Registered? Login', onPressed: () {
-                  navigateTo(context,const Login());
-            }),
+                txt: 'Already Registered? Login',
+                onPressed: () {
+                  navigateTo(context, const Login());
+                }),
             const SizedBox(
               height: 15,
             ),
@@ -125,7 +132,6 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-
                   defualtTextFormField(
                       controller: dataControl,
                       type: TextInputType.datetime,
@@ -139,8 +145,7 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-
-                  defualtTextFormField(
+                  provider.count == 1 ?defualtTextFormField(
                       controller: idControl,
                       type: TextInputType.number,
                       validate: (value) {
@@ -149,20 +154,22 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                         }
                         return null;
                       },
-                      hint: 'Enter Your Id Number'),
+                      hint: 'Enter Your Id Number'): const SizedBox(height: 0),
                   const SizedBox(
                     height: 20,
                   ),
-                  defualtTextFormField(
-                      controller: licenseControl,
-                      type: TextInputType.number,
-                      validate: (value) {
-                        if (value!.isEmpty) {
-                          return 'Enter Your Training license number';
-                        }
-                        return null;
-                      },
-                      hint: 'Enter Your Training license number'),
+                  provider.count == 1
+                      ? defualtTextFormField(
+                          controller: licenseControl,
+                          type: TextInputType.number,
+                          validate: (value) {
+                            if (value!.isEmpty) {
+                              return 'Enter Your Training license number';
+                            }
+                            return null;
+                          },
+                          hint: 'Enter Your Training license number')
+                      : SizedBox(height: 0),
                   const SizedBox(
                     height: 20,
                   ),
@@ -170,10 +177,8 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
                       txt: 'Sign Up ',
                       color: Colors.white,
                       ontab: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const NavigationScreen()));
+                        provider.checkKind(context);
+
                       }),
                   const SizedBox(
                     height: 20,

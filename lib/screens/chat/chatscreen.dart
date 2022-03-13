@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:rights_project/style.dart';
 
@@ -6,14 +7,14 @@ class Chatscreen extends StatelessWidget {
 
   Widget Chatbottom() {
     return Container(
-      height: 100,
+      height: 80,
       color: brown,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Icon(Icons.add, color: gold, size: 40),
           Container(
-            height: 80,
+            height: 55,
             width: 250,
             child: TextFormField(
               maxLines: 3,
@@ -21,7 +22,8 @@ class Chatscreen extends StatelessWidget {
               decoration: InputDecoration(
                 fillColor: Colors.white,
                 filled: true,
-                hintText: '....اكتب الان',
+
+                hintText: 'Message...',
                 // hintStyle: hintStyle,
                 focusedBorder: OutlineInputBorder(
                   borderSide: const BorderSide(color: Colors.white),
@@ -87,8 +89,8 @@ class Chatscreen extends StatelessWidget {
         backgroundColor: brown,
         //todo : اظبط الصورة عاالبرنامج
         title: const Image(
-            image: AssetImage('images/logo.png'),
-            height: 100,
+            image: AssetImage('images/logo1.png'),
+            height: 55,
             fit: BoxFit.contain),
         centerTitle: true,
         actions: const [

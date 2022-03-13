@@ -94,7 +94,7 @@ class _ChatviewState extends State<Chatview> {
                         ),
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) => const Chatscreen()));
+                              builder: (BuildContext context) =>  const Chatscreen()));
                         },
                       ),
                   separatorBuilder: (BuildContext context, int index) =>

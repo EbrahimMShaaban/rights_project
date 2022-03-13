@@ -1,7 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:rights_project/screens/profile/editprofille.dart';
+import 'package:rights_project/screens/registration/firstscreen.dart';
 import 'package:rights_project/style.dart';
+import 'package:rights_project/widgets/compnant.dart';
 
 class Homeview extends StatelessWidget {
   const Homeview({Key? key}) : super(key: key);
@@ -13,12 +16,29 @@ class Homeview extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: const [
-                Image(
+            Stack(
+              alignment: AlignmentDirectional.topStart,
+              children: [
+                const Image(
                   image: AssetImage('images/curve.png'),
-                  height: 150,
+                  height: 170,
                 ),
+                Padding(
+                    padding: const EdgeInsets.fromLTRB(25, 50, 0, 0),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: RotationTransition(
+                          turns: const AlwaysStoppedAnimation(180 / 360),
+                          child: IconButton(
+                            onPressed: () {
+                              navigateTo(context, const Firstscreen());
+                            },
+                            icon: const Icon(
+                              Icons.logout,
+                            ),
+                            color: const Color(0xffd1aa5f),
+                          )),
+                    )),
               ],
             ),
             Center(
@@ -32,26 +52,25 @@ class Homeview extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Center(
                     child: Image(
-                      image:const AssetImage('images/myrequest.png'),
+                      image: const AssetImage('images/myrequest.png'),
                       width: sizeFromWidth(context, 1.1),
                       height: sizeFromHeight(context, 4),
                     ),
                   ),
                   const Center(
-                      child:  Text(
-                        'My Request',
-                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                      )),
+                      child: Text(
+                    'My Request',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  )),
                 ],
               ),
             ),
-
           ],
         ),
       ),

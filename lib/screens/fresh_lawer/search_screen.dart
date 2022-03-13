@@ -11,7 +11,7 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: brown,
-        title: Text('Find a lawyer'),
+        title: const Text('Find a lawyer'),
         centerTitle: true,
         actions: [
           IconButton(
@@ -76,8 +76,8 @@ class CustomSearchDelegate extends SearchDelegate {
           padding: EdgeInsets.all(10),
           child: Loginbuton(
               ontab: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => Userdetails()));
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Userdetails()));
               },
               txt: result,
               color: const Color(0xffd1aa5f)),
@@ -102,8 +102,8 @@ class CustomSearchDelegate extends SearchDelegate {
           padding: EdgeInsets.all(10),
           child: Loginbuton(
               ontab: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) =>  Userdetails()));
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Userdetails()));
               },
               txt: result,
               color: const Color(0xffd1aa5f)),

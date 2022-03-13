@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rights_project/screens/fresh_lawer/search_screen.dart';
+import 'package:rights_project/screens/registration/firstscreen.dart';
 import 'package:rights_project/widgets/compnant.dart';
 
 import '../../style.dart';
@@ -12,15 +13,21 @@ class FreshView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         backgroundColor: const Color(0xff3f3b43),
-        actions:  [
+        actions: [
           IconButton(
-              onPressed: () {
-                navigateTo(context, const Notificationview());
-              },
-              icon:const Icon(Icons.notifications),),
-        const  SizedBox(
+            onPressed: () {
+              navigateTo(context, const Notificationview());
+            },
+            icon: const Icon(Icons.notifications),
+          ),
+          IconButton(
+            onPressed: () {
+              navigateTo(context, const Firstscreen());
+            },
+            icon: const Icon(Icons.logout),
+          ),
+          const SizedBox(
             width: 10,
           ),
         ],
@@ -33,7 +40,7 @@ class FreshView extends StatelessWidget {
               height: 50,
             ),
             Center(
-              child: Container(
+              child: SizedBox(
                 height: sizeFromHeight(context, 2),
                 //color: Colors.amber,
                 child: const Image(

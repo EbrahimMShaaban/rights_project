@@ -31,7 +31,7 @@ class Profileview extends StatelessWidget {
                           onPressed: () {
                             navigateTo(context, const Profileedit());
                           },
-                          icon: const Icon(Icons.settings_sharp),
+                          icon: const Icon(Icons.settings),
                           color: const Color(0xffd1aa5f),
                         )),
                   ),
