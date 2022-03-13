@@ -30,7 +30,7 @@ class _ClientHomeState extends State<ClientHome> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Image(image: AssetImage('images/logo.png')),
+                        const Center(child: Image(image: AssetImage('images/logo.png')),),
                         Container(
                           width: 40,
                           height: 40,
@@ -39,7 +39,7 @@ class _ClientHomeState extends State<ClientHome> {
                               color: Colors.white),
                           child: IconButton(
                             onPressed: () {},
-                            icon: const Icon(Icons.settings),
+                            icon: const Icon(Icons.logout),
                             color: const Color(0xffd1aa5f),
                             iconSize: 25,
                           ),

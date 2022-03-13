@@ -18,7 +18,7 @@ class LoginProv with ChangeNotifier {
         break;
 
       case 2:
-        navigateAndFinish(context, const ClientNavScreen());
+        navigateAndFinish(context, const ClientNavigate());
         break;
     }
   }
