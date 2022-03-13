@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rights_project/screens/client_screen/navigationbar.dart';
 import 'package:rights_project/screens/fresh_lawer/view.dart';
 import 'package:rights_project/screens/navigation.dart';
 import 'package:rights_project/widgets/compnant.dart';
@@ -18,7 +17,7 @@ class LoginProv with ChangeNotifier {
         break;
 
       case 2:
-        navigateAndFinish(context, const ClientNavigate());
+        navigateAndFinish(context, const NavigationScreen());
         break;
     }
   }

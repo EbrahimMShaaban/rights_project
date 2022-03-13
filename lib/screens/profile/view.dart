@@ -1,15 +1,18 @@
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:rights_project/screens/profile/editprofille.dart';
 import 'package:rights_project/screens/profile/reviewitem.dart';
 import 'package:rights_project/widgets/compnant.dart';
 
-
+import '../../providers/loginprov.dart';
 
 class Profileview extends StatelessWidget {
   const Profileview({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var prov = Provider.of<LoginProv>(context);
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,13 +30,20 @@ class Profileview extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(25, 50, 0, 0),
                     child: CircleAvatar(
                         backgroundColor: Colors.white,
-                        child: IconButton(
+                        //TODO : edit condition
+                        child: prov.count ==[0,1]?IconButton(
                           onPressed: () {
                             navigateTo(context, const Profileedit());
                           },
                           icon: const Icon(Icons.settings),
                           color: const Color(0xffd1aa5f),
-                        )),
+                        ): IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: const Icon(Icons.arrow_back),
+                          color: const Color(0xffd1aa5f),
+                        ) ),
                   ),
                 ],
               ),
@@ -144,7 +154,7 @@ class Profileview extends StatelessWidget {
                     style: TextStyle(fontSize: 18),
                   ),
                   Text(
-                    'اتعاب المحاماة',
+                    'lawyer\'s charge',
                     style: TextStyle(fontSize: 18),
                   ),
                 ],
@@ -156,7 +166,7 @@ class Profileview extends StatelessWidget {
                     style: TextStyle(fontSize: 18),
                   ),
                   Text(
-                    'عدد الاستشارات',
+                    'number of consultations',
                     style: TextStyle(fontSize: 18),
                   ),
                 ],
@@ -181,6 +191,7 @@ class Profileview extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
+                padding: EdgeInsets.zero,
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return ReviewItem();

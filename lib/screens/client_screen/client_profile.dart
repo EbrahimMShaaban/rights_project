@@ -5,11 +5,13 @@ import 'package:rights_project/widgets/compnant.dart';
 
 
 
+
 class ClientProfile extends StatelessWidget {
   const ClientProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,7 +110,7 @@ class ClientProfile extends StatelessWidget {
                     style: TextStyle(fontSize: 18),
                   ),
                   Text(
-                    ' الطلبات السابقة',
+                    ' Previous orders',
                     style: TextStyle(fontSize: 18),
                   ),
                 ],
@@ -124,7 +126,7 @@ class ClientProfile extends StatelessWidget {
                     style: TextStyle(fontSize: 18),
                   ),
                   Text(
-                    'الطلبات الحالية',
+                  'current orders',
                     style: TextStyle(fontSize: 18),
                   ),
                 ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rights_project/screens/registration/firstscreen.dart';
 import 'package:rights_project/style.dart';
+import 'package:rights_project/widgets/compnant.dart';
 
 class ClientHome extends StatefulWidget {
   const ClientHome({Key? key}) : super(key: key);
@@ -38,7 +40,9 @@ class _ClientHomeState extends State<ClientHome> {
                               borderRadius: BorderRadius.circular(15),
                               color: Colors.white),
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              navigateAndFinish(context, const Firstscreen());
+                            },
                             icon: const Icon(Icons.logout),
                             color: const Color(0xffd1aa5f),
                             iconSize: 25,
@@ -48,7 +52,7 @@ class _ClientHomeState extends State<ClientHome> {
                     ),
                   ),
                   const Text(
-                    'ما هو نوع استشارتك القانونية التي تود طلبها؟',
+                    'What kind of legal advice would you like to request?',textAlign:TextAlign.center ,
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ],

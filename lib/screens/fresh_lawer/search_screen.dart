@@ -22,20 +22,25 @@ class SearchScreen extends StatelessWidget {
           )
         ],
       ),
+      body: const Center(
+        child:
+            Text('Find a lawyer using search', style: TextStyle(fontSize: 30)),
+      ),
     );
   }
 }
 
 class CustomSearchDelegate extends SearchDelegate {
   List<String> searchTerms = [
-    'Apple',
-    'Banana',
-    'Pear',
-    'Watermelons',
-    'Oranges',
-    'Blueberries',
-    'Strawberries',
-    'Raspberries',
+    'test',
+    'test',
+    'test',
+    'test',
+    'test',
+    'test',
+    'test',
+    'test',
+    'test',
   ];
 
   @override
@@ -73,7 +78,7 @@ class CustomSearchDelegate extends SearchDelegate {
       itemBuilder: (context, index) {
         var result = matchQuery[index];
         return Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Loginbuton(
               ontab: () {
                 Navigator.of(context).push(

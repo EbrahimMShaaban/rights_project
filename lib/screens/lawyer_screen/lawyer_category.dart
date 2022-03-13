@@ -5,8 +5,7 @@ import 'package:rights_project/screens/lawyer_screen/register_screen.dart';
 import '../../providers/loginprov.dart';
 import '../../style.dart';
 import '../../widgets/compnant.dart';
-import '../client_screen/client_register.dart';
-import '../fresh_lawer/view.dart';
+
 
 class LawyerCategory extends StatefulWidget {
   const LawyerCategory({Key? key}) : super(key: key);

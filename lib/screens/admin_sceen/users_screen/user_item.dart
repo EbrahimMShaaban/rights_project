@@ -46,15 +46,15 @@ class _UseritemState extends State<Useritem> {
                   width: sizeFromWidth(context, 2),
                 ),
               ),
-              InkWell(onTap: () {}, child: const Icon(Icons.star)),
+              InkWell(onTap: () {}, child: const Icon(Icons.check)),
               SizedBox(
                 width: sizeFromWidth(context, 25),
               ),
-              InkWell(onTap: () {}, child: const Icon(Icons.star)),
+              InkWell(onTap: () {}, child: const Icon(Icons.block)),
               SizedBox(
                 width: sizeFromWidth(context, 25),
               ),
-              InkWell(onTap: () {}, child: const Icon(Icons.delete))
+
             ],
           ),
         ),
