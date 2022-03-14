@@ -9,7 +9,7 @@ import '../../providers/loginprov.dart';
 
 class Profileview extends StatelessWidget {
   const Profileview({Key? key}) : super(key: key);
-
+  //1
   @override
   Widget build(BuildContext context) {
     var prov = Provider.of<LoginProv>(context);
@@ -31,15 +31,16 @@ class Profileview extends StatelessWidget {
                     child: CircleAvatar(
                         backgroundColor: Colors.white,
                         //TODO : edit condition
-                        child: IconButton(
-                          onPressed: () {
-                            navigateTo(context, const Profileedit());
-                          },
-                          icon: const Icon(Icons.settings),
-                          color: const Color(0xffd1aa5f),
-                        ) ),
+                         child:prov.checkIcon(context) ,
+                      // IconButton(
+                        //   onPressed: () {
+                        //     navigateTo(context, const Profileedit());
+                        //   },
+                        //   icon: const Icon(Icons.settings),
+                        //   color: const Color(0xffd1aa5f),
+                        // ) ),
                   ),
-                ],
+                  )],
               ),
               Expanded(
                 child: Column(

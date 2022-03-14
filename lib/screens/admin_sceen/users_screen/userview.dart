@@ -24,6 +24,7 @@ final String itemname;
           itemBuilder: (BuildContext, index) {
             return Useritem(
               ontab: () {
+                provider.count==3;
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => const Profileview()));
               },

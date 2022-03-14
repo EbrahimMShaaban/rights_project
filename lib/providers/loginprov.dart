@@ -6,7 +6,7 @@ import 'package:rights_project/widgets/compnant.dart';
 import '../screens/profile/editprofille.dart';
 
 class LoginProv with ChangeNotifier {
-  late int count;
+   int count=0;
 
   checkKind(BuildContext context) {
     switch (count) {
