@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:rights_project/screens/admin_sceen/awareness_information.dart';
 import 'package:rights_project/screens/admin_sceen/map.dart';
 import 'package:rights_project/screens/admin_sceen/users_screen/userview.dart';
@@ -7,6 +8,8 @@ import 'package:rights_project/widgets/compnant.dart';
 
 
 import 'package:rights_project/widgets/login_button.dart';
+
+import '../../providers/loginprov.dart';
 
 class CategoryView extends StatefulWidget {
   const CategoryView({Key? key}) : super(key: key);

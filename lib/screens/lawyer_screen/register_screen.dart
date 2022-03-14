@@ -35,9 +35,7 @@ class _RegisterLawyerScreenState extends State<RegisterLawyerScreen> {
   Widget build(BuildContext context) {
     var provider = Provider.of<LoginProv>(context);
     return Scaffold(
-      appBar: AppBar(
 
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [

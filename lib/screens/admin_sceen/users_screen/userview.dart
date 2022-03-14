@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:rights_project/screens/admin_sceen/users_screen/user_details.dart';
 import 'package:rights_project/screens/admin_sceen/users_screen/user_item.dart';
 
+import '../../../providers/loginprov.dart';
 import '../../profile/view.dart';
 
 class Userview extends StatelessWidget {
@@ -10,6 +12,7 @@ class Userview extends StatelessWidget {
 final String itemname;
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<LoginProv>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xff3f3b43),

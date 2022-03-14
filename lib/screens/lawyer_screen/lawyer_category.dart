@@ -19,60 +19,62 @@ class _LawyerCategoryState extends State<LawyerCategory> {
   Widget build(BuildContext context) {
     var provider = Provider.of<LoginProv>(context);
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("images/background.png"),
-            fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/background.png"),
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        child: Center(
-          child: Column(
-            children: [
-             const SizedBox(height: 5,),
-              Image(
-                image: const AssetImage(
-                  'images/logo.png',
+          child: Center(
+            child: Column(
+              children: [
+               const SizedBox(height: 5,),
+                Image(
+                  image: const AssetImage(
+                    'images/logo.png',
+                  ),
+                  height: sizeFromHeight(context, 3),
                 ),
-                height: sizeFromHeight(context, 3),
-              ),
-               InkWell(
-                onTap: (){
-                  provider.count=0;
-                  navigateAndFinish(context, const RegisterLawyerScreen());
-                },
-                child: const Image(
-                  image: AssetImage('images/lawyer_image.png'),
-                  width: 300,
-                  height: 150,
+                 InkWell(
+                  onTap: (){
+                    provider.count=0;
+                    navigateAndFinish(context, const RegisterLawyerScreen());
+                  },
+                  child: const Image(
+                    image: AssetImage('images/lawyer_image.png'),
+                    width: 300,
+                    height: 150,
+                  ),
                 ),
-              ),
-             const SizedBox(height: 20,),
-              InkWell(
-                onTap: (){
-                  provider.count=1;
-                  navigateTo(context, const RegisterLawyerScreen());
-                },
-                child: const Image(
-                  image: AssetImage('images/fersh_lawyer.png'),
-                  width: 300,
-                  height: 150,
+               const SizedBox(height: 20,),
+                InkWell(
+                  onTap: (){
+                    provider.count=1;
+                    navigateTo(context, const RegisterLawyerScreen());
+                  },
+                  child: const Image(
+                    image: AssetImage('images/fersh_lawyer.png'),
+                    width: 300,
+                    height: 150,
+                  ),
                 ),
-              ),
-             const SizedBox(height: 20,),
-              InkWell(
-                onTap: (){
-                  provider.count=2;
-                  navigateTo(context, const RegisterLawyerScreen());
-                },
-                child: const Image(
-                  image: AssetImage('images/clint_image.png'),
-                  width: 300,
-                  height: 150,
+               const SizedBox(height: 20,),
+                InkWell(
+                  onTap: (){
+                    provider.count=2;
+                    navigateTo(context, const RegisterLawyerScreen());
+                  },
+                  child: const Image(
+                    image: AssetImage('images/clint_image.png'),
+                    width: 300,
+                    height: 150,
+                  ),
                 ),
-              ),
 
-            ],
+              ],
+            ),
           ),
         ),
       ),

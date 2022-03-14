@@ -64,7 +64,7 @@ class _ClientHomeState extends State<ClientHome> {
                   padding: const EdgeInsets.all(20.0),
                   child: Container(
                     height: 40,
-                    width: 310,
+                    width: MediaQuery.of(context).size.width/1.3,
                     child: TextFormField(
                       controller: searchControl,
                       decoration: InputDecoration(

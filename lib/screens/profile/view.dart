@@ -31,17 +31,11 @@ class Profileview extends StatelessWidget {
                     child: CircleAvatar(
                         backgroundColor: Colors.white,
                         //TODO : edit condition
-                        child: prov.count ==[0,1]?IconButton(
+                        child: IconButton(
                           onPressed: () {
                             navigateTo(context, const Profileedit());
                           },
                           icon: const Icon(Icons.settings),
-                          color: const Color(0xffd1aa5f),
-                        ): IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          icon: const Icon(Icons.arrow_back),
                           color: const Color(0xffd1aa5f),
                         ) ),
                   ),
