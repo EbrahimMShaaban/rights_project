@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rights_project/screens/profile/editprofille.dart';
@@ -9,6 +8,7 @@ import '../../providers/loginprov.dart';
 
 class Profileview extends StatelessWidget {
   const Profileview({Key? key}) : super(key: key);
+
   //1
   @override
   Widget build(BuildContext context) {
@@ -31,16 +31,15 @@ class Profileview extends StatelessWidget {
                     child: CircleAvatar(
                         backgroundColor: Colors.white,
                         //TODO : edit condition
-                         child:prov.checkIcon(context) ,
-                      // IconButton(
-                        //   onPressed: () {
-                        //     navigateTo(context, const Profileedit());
-                        //   },
-                        //   icon: const Icon(Icons.settings),
-                        //   color: const Color(0xffd1aa5f),
-                        // ) ),
+                        child: IconButton(
+                          onPressed: () {
+                            navigateTo(context, const Profileedit());
+                          },
+                          icon: const Icon(Icons.settings),
+                          color: const Color(0xffd1aa5f),
+                        )),
                   ),
-                  )],
+                ],
               ),
               Expanded(
                 child: Column(

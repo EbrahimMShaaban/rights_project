@@ -15,7 +15,7 @@ class Chatscreen extends StatelessWidget {
           Icon(Icons.add, color: gold, size: 40),
           Container(
             height: 55,
-            width: 250,
+            width: 230,
             child: TextFormField(
               maxLines: 3,
               // controller: _controller,
